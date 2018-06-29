@@ -1,7 +1,11 @@
 angular.module('video-player')
   .component('videoListEntry', {
     bindings: {
-      // name: '@'
+      video: '<'
+    },
+    controller: function() {
+      // debugger;
+      // console.log(this)
     },
     templateUrl: './src/templates/videoListEntry.html',
   });
