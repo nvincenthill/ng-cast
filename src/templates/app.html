@@ -1,16 +1,16 @@
 <div id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <search><h5><em>search</em> component goes here</h5></search>
+      <search handle='$ctrl.handle'><h5><em>search</em> component goes here</h5></search>
     </div>
   </nav>
   <div class="row">
     <div class="col-md-7">
-      <video-player video='$ctrl.currentVideo'><h5><em>videoPlayer</em> component goes here</h5></video-player>
+      <video-player ng-hide="!$ctrl.currentVideo" video='$ctrl.currentVideo'><h5><em>videoPlayer</em> component goes here</h5></video-player>
     </div>
     <div class="col-md-5">
       <video-list
-      videos='$ctrl.videos' onClick='$ctrl.onClick'
+      videos='$ctrl.videos' select-video='$ctrl.selectVideo'
       ></video-list>
     </div>
   <div>
