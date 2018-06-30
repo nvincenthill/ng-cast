@@ -2,16 +2,22 @@ angular.module('video-player')
   .service('youTube', ['$http', function($http) {
     return {
       search: function(query, callback) {
+        let cb = callback;
         $http({
           method: 'GET',
-          url: '/someUrl',
+          url: 'https://www.googleapis.com/youtube/v3/search?',
+          dataType: 'jsonp',
           params: {
-            parts: 'sni'
+            q: query,
+            part: 'snippet',
+            type: 'video',
+            maxResults: 5,
+            key: window.YOUTUBE_API_KEY,
+            videoEmbeddable: true
           }
-          
-        }).then(function successCallback(response) {
-          callback();
-        }, function errorCallback(response) {
+        }).then((response) => {
+          cb(response.data);
+        },(response) => {
           console.log('failed to fetch');
         });
       }

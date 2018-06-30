@@ -6,7 +6,6 @@ angular.module('video-player')
       selectVideo: '<'
     },
     controller: function() {
-      console.log(this);
     },
     templateUrl: 'src/templates/videoListEntry.html',
   });
