@@ -1,13 +1,19 @@
 angular.module('video-player')
 
   .component('app', {
+    
     // bindings: {
     //   // name: '@'
     // },
+    
     controller: function() {
       this.videos = window.exampleVideoData;
-      this.selectVideo = () => {
+      this.currentVideo = this.videos[0];
+      this.selectVideo = function() {
+      };
+      this.searchResults = function() {
       };
     },
-    templateUrl: '/src/templates/app.html',
+    
+    templateUrl: 'src/templates/app.html',
   });

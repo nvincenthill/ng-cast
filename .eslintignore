@@ -4,3 +4,4 @@
 **/*.min.js
 spec/lib
 src/data/exampleVideoData.js
+src/components/fred.js

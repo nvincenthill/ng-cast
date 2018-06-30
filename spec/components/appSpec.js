@@ -9,7 +9,6 @@ describe('app', function() {
 
   beforeEach(inject(function($rootScope, $compile, youTube) {
     var scope = $rootScope.$new();
-
     // We're stubbing out the youTube search function so it doesn't
     // make an http request
     youTube.search = function(str, callback) {

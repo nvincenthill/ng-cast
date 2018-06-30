@@ -3,5 +3,10 @@ angular.module('video-player')
     bindings: {
       // name: '@'
     },
-    templateUrl: './src/templates/search.html',
+    controller: function() {
+      this.result = function() {
+        
+      };
+    },
+    templateUrl: 'src/templates/search.html',
   });
